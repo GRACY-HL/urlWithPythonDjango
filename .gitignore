@@ -6,6 +6,7 @@ staticfiles
 .env
 *.log
 
+kirr/settings/local.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
