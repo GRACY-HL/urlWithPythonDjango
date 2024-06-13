@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}URL Shortener{% endblock title %}
+
+{% block content %}
+<div class="center-box">
+    <span>Enter your URL here:</span>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %}

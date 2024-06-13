@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>u.byk.one | {% block title %}URL-Shortener{% endblock title %}</title>
+    <style>
+        
+        a,
+        a:focus,
+        a:hover {
+          color: #fff;
+        }
+
+        /* Custom default button */
+        .btn-default,
+        .btn-default:hover,
+        .btn-default:focus {
+          color: #33333389;
+          text-shadow: none; /* Prevent inheritance from `body` */
+          background-color: #fff;
+          border: 1px solid #fff;
+        }
+        html,
+        body {
+          height: 100%;
+          background: url('https://storage.cloud.google.com/django123/image1.png') no-repeat center center fixed;
+          background-size: cover;
+          color: #fff;
+          background-color: #4f7c8a;
+          text-align: center;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .form-control {
+        width: 400px;
+        padding: 5px;
+        border-radius: 10px;
+        }
+
+        .site-wrapper {
+          display: table;
+          width: 100%;
+          height: 100%;
+          min-height: 100%;
+          -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+        }
+        .site-wrapper-inner {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .cover-container {
+          margin-right: auto;
+          margin-left: auto;
+        }
+        .center-box {
+          background-color: rgba(0, 0, 0, 0.654);
+          padding: 30px;
+          border-radius: 40px;
+          max-width: 500px;
+          margin: 0 auto;
+          text-align: left;
+        }
+        .btn-primary {
+        background-color: #518aa5; /* Blue color */
+        color: #fff; 
+        padding: 4px 8px;
+        border: none;
+        border-radius: 10px; 
+        cursor: pointer; 
+        font-size: 15px; 
+        }
+        .form-group {
+        margin-bottom: 20px; /* Bottom margin */
+        }
+
+        .header-text {
+          font-size: 2em;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+        .container {
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        }
+        .btn-custom {
+        background-color: #4f7c8a;
+        color: white;
+        padding: 8px 10px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+        }
+
+        .masthead-brand {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        .masthead-nav > li {
+          display: inline-block;
+        }
+        .masthead-nav > li + li {
+          margin-left: 20px;
+        }
+        .masthead-nav > li > a {
+          padding-right: 0;
+          padding-left: 0;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff; /* IE8 proofing */
+          color: rgba(255,255,255,.75);
+          border-bottom: 2px solid transparent;
+        }
+        .masthead-nav > li > a:hover,
+        .masthead-nav > li > a:focus {
+          background-color: transparent;
+          border-bottom-color: #a9a9a9;
+          border-bottom-color: rgba(255,255,255,.25);
+        }
+        .masthead-nav > .active > a,
+        .masthead-nav > .active > a:hover,
+        .masthead-nav > .active > a:focus {
+          color: #fff;
+          border-bottom-color: #fff;
+        }
+
+        @media (min-width: 768px) {
+          .masthead-brand {
+            float: left;
+          }
+          .masthead-nav {
+            float: right;
+          }
+        }
+        .cover {
+          padding: 0 20px;
+        }
+        .cover .btn-lg {
+          padding: 10px 20px;
+          font-weight: bold;
+        }
+
+
+        .mastfoot {
+          color: #999; /* IE8 proofing */
+          color: rgba(255,255,255,.5);
+        }
+
+        @media (min-width: 768px) {
+          /* Pull out the header and footer */
+          .masthead {
+            position: fixed;
+            top: 0;
+          }
+          .mastfoot {
+            position: fixed;
+            bottom: 0;
+          }
+          /* Start the vertical centering */
+          .site-wrapper-inner {
+            vertical-align: middle;
+          }
+          /* Handle the widths */
+          .masthead,
+          .mastfoot,
+          .cover-container {
+            width: 100%; /* Must be percentage or pixels for horizontal alignment */
+          }
+        }
+
+        @media (min-width: 992px) {
+          .masthead,
+          .mastfoot,
+          .cover-container {
+            width: 700px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="inner cover">
+                    <!-- Added Header Text -->
+                    <div class="header-text">
+                        URL-Shortener
+                    </div>
+                    <div class="center-box">
+                        {% block content %}
+                        <!-- Your content goes here -->
+                        {% endblock content %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="">
+        <h1>Success!</h1>
+        <p>Your URL:{{ object.url }}</p>
+        <p>Your shortcode: <a class=" btn-link" href="{{ object.get_short_url }}">{{ object.get_short_url }}</a></p>
+        <div class="container">
+        <a class="btn-custom" href="/">+New</a>
+    </div>
+    </div>
+{% endblock content %}
